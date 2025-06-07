@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inter de Verdun B - Supreme</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="escudo.png" type="image/png"/>
+</head>
+<body>
+  <header>
+    <h1>Inter de Verdun B</h1>
+    <p>Fuerza y honor</p>
+  </header>
+
+  <main>
+    <section id="formacion"><h2>Formación táctica</h2><div id="campo"></div></section>
+    <section id="convocatorias"><h2>Convocatoria</h2><textarea id="convocatoriaInput"></textarea><button onclick="guardarConvocatoria()">Guardar</button></section>
+    <section id="asistencia"><h2>Asistencia</h2><form onsubmit="registrarAsistencia(event)"><input type="text" id="nombreAsistente" required/><select id="respuestaAsistencia"><option value="sí">Sí</option><option value="no">No</option><option value="tarde">Tarde</option></select><button>Confirmar</button></form><ul id="listaAsistencia"></ul></section>
+    <section id="mvp"><h2>MVP</h2><input id="nombreMVP"/><button onclick="votarMVP()">Votar</button><ul id="rankingMVP"></ul></section>
+    <section id="historial"><h2>Historial</h2><ul id="listaHistorial"></ul><button onclick="agregarPartido()">Agregar partido</button></section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {{
+      navigator.serviceWorker.register('service-worker.js');
+    }}
+  </script>
+</body>
+</html>

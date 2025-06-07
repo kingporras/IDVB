@@ -1,0 +1,9 @@
+
+body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+header { background: #0288d1; color: white; padding: 1rem; text-align: center; }
+main { padding: 1rem; }
+section { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+#campo, .linea { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.jugador { background: #b3e5fc; padding: 10px; border-radius: 6px; }
+textarea, input, select { width: 100%; padding: 8px; margin-top: 8px; }
+button { background: #0288d1; color: white; border: none; padding: 8px 16px; margin-top: 8px; border-radius: 4px; cursor: pointer; }
